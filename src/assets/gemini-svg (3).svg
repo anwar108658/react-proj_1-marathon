@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" style="background-color: #090D16;">
+  <defs>
+    <!-- Vibrant Gradients for Dark Mode -->
+    <linearGradient id="aafaqGradDark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <linearGradient id="horizonGlowDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <!-- Subtle Glow Effect -->
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- CENTERED LOGO MARK -->
+  <g transform="translate(10, 10)">
+    <!-- Base Outer Modular Arc -->
+    <path d="M 10 65 A 36 36 0 0 1 70 20" fill="none" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+    <path d="M 10 65 A 36 36 0 0 1 65 15" fill="none" stroke="url(#aafaqGradDark)" stroke-width="4" stroke-linecap="round" stroke-dasharray="70 120" />
+    
+    <!-- Outer Node Dots -->
+    <circle cx="65" cy="15" r="3.5" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="74" cy="38" r="2.5" fill="#6366F1" />
+    <circle cx="10" cy="65" r="2.5" fill="#334155" />
+
+    <!-- Ascending Steps / Goal Breakdown Bars -->
+    <rect x="22" y="48" width="7" height="14" rx="2.5" fill="#1E293B" />
+    <rect x="32" y="39" width="7" height="23" rx="2.5" fill="url(#aafaqGradDark)" opacity="0.65" />
+    <rect x="42" y="28" width="7" height="34" rx="2.5" fill="url(#aafaqGradDark)" opacity="0.90" />
+    
+    <!-- Dynamic Arrow Head -->
+    <path d="M52 18 L52 30 L44 30 L52 18 Z" fill="url(#aafaqGradDark)" />
+    <path d="M20 52 L34 38 L44 26 L58 12" fill="none" stroke="url(#horizonGlowDark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="58" cy="12" r="3.5" fill="#38BDF8" />
+  </g>
+</svg>
